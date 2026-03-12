@@ -1,73 +1,81 @@
-# React + TypeScript + Vite
+# 🍿 CineVerse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![CineVerse Homepage Demo](./public/screenshot-home.png)
 
-Currently, two official plugins are available:
+CineVerse is a visually stunning, responsive movie discovery application built with **React 18**, **TypeScript**, and the **TMDB (The Movie Database) API**. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+It features a premium "dark glassmorphism" design system, smooth micro-animations, and dynamic data fetching.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- **Hero Slider**: Auto-playing Swiper.js hero section featuring the week's trending movies with animated backdrop crossfades.
+- **Dynamic Movie Rows**: Horizontal scrolling rows for *Trending*, *Now Playing*, *Popular*, and *Top Rated* movies.
+- **Deep Search**: A URL-synced, debounced search experience that queries the TMDB database in real-time.
+- **Rich Details Pages**: View high-resolution posters, budget/revenue financials, runtime, full cast lists, and embedded YouTube trailers.
+- **Genre Browsing**: Filter thousands of movies by categories like *Action*, *Comedy*, or *Sci-Fi*.
+- **Premium UI/UX**: Custom skeleton loading states, glassmorphism blur effects, custom scrollbars, and a fully mobile-responsive layout.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📸 Screenshots
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Movie Details & Trailers
+![Movie Detail Page](./public/screenshot-detail.png)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Real-time Search
+![Search Results](./public/screenshot-search.png)
+
+---
+
+## 🛠️ Technology Stack
+
+- **Framework**: [React 18](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Routing**: [React Router v6](https://reactrouter.com/)
+- **Data Fetching**: [TanStack Query v5](https://tanstack.com/query/v5) (React Query)
+- **API Requests**: [Axios](https://axios-http.com/)
+- **Carousels**: [Swiper.js](https://swiperjs.com/)
+- **Styling**: Vanilla CSS Modules (Variables, Flexbox/Grid, Glassmorphism)
+- **Icons**: [React Icons](https://react-icons.github.io/react-icons/) (Feather icons)
+
+---
+
+## 🚀 Getting Started
+
+To run this project locally, you will need a free API key from [The Movie Database (TMDB)](https://www.themoviedb.org/).
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/yourusername/cineverse.git
+cd cineverse
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 2. Install dependencies
+```bash
+npm install
 ```
+
+### 3. Setup Environment Variables
+Create a `.env` file in the root of the project:
+```env
+VITE_TMDB_API_KEY=your_api_key_here
+VITE_TMDB_ACCESS_TOKEN=your_read_access_token_here
+VITE_TMDB_BASE_URL=https://api.themoviedb.org/3
+VITE_TMDB_IMAGE_BASE_URL=https://image.tmdb.org/t/p
+```
+
+### 4. Run the development server
+```bash
+npm run dev
+```
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+---
+
+## 🌐 Deployment
+This project is completely free to host. See the [DEPLOYMENT.md](./DEPLOYMENT.md) guide for 1-click publishing instructions to Vercel or Netlify.
+
+---
+*Built with ❤️ using React and TMDB.*
