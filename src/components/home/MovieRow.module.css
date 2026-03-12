@@ -1,0 +1,68 @@
+.section {
+  margin-bottom: 48px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  color: var(--accent-gold);
+}
+
+.viewAll {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent-secondary);
+  transition: color var(--transition-fast), gap var(--transition-fast);
+  white-space: nowrap;
+}
+
+.viewAll:hover {
+  color: var(--accent-gold);
+  gap: 8px;
+}
+
+.arrows {
+  display: flex;
+  gap: 4px;
+}
+
+.arrowBtn {
+  background: var(--bg-glass-light);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.arrowBtn:hover {
+  background: var(--accent-primary);
+  color: white;
+  border-color: transparent;
+}
+
+.row {
+  /* inherits scroll-row from global CSS */
+}

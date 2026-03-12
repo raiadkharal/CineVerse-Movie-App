@@ -1,0 +1,64 @@
+.footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  padding: 24px 0;
+  margin-top: 80px;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-secondary), var(--accent-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo svg {
+  color: var(--accent-secondary);
+  -webkit-text-fill-color: initial;
+}
+
+.credit {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.heart {
+  color: #ef4444;
+}
+
+.tmdbLink {
+  color: var(--accent-secondary);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.tmdbLink:hover {
+  color: var(--accent-gold);
+}
+
+.githubLink {
+  color: var(--text-muted);
+  display: flex;
+  transition: color var(--transition-fast);
+}
+
+.githubLink:hover {
+  color: var(--text-primary);
+}
